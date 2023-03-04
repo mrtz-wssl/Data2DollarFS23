@@ -1,0 +1,1 @@
+snscrape --max-results 100 twitter-user borussia >borussiauser.csv
