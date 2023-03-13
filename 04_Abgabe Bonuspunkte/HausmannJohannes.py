@@ -16,10 +16,3 @@ json_object = json.dumps(tweets)
 json_file = open("HausmannJohannes.json", "w")
 json_file.write(json_object)
 json_file.close()
-
-# Writing csv file
-with open("HausmannJohannes.csv", "w", newline='', encoding='utf-8') as csv_file:
-    writer = csv.writer(csv_file)
-    writer.writerow(["tweet", "url"])
-    for tweet in tweets:
-        writer.writerow([tweet["tweet"], tweet["url"]])
