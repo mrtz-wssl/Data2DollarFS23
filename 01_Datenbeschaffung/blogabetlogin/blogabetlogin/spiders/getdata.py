@@ -17,9 +17,8 @@ class GetdataSpider(scrapy.Spider):
     start_urls = ['http://www.blogabet.com']
 
     def parse(self, response):
-
         url = 'http://www.blogabet.com'
-        self.driver = webdriver.Chrome('C:\DRIVERS\chromedriver_win32\chromedriver.exe')
+        self.driver = webdriver.Chrome('/Applications/chromedriver')
         self.driver.get(url)
         sleep(5)
         self.driver.find_element_by_class_name('btn-success').click()
@@ -33,4 +32,3 @@ class GetdataSpider(scrapy.Spider):
         password.send_keys("IC2023,")
         self.driver.find_element_by_class_name('btn-danger').click()
         sleep(5)
-        
