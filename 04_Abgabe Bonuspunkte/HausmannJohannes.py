@@ -4,7 +4,7 @@ import json
 import csv
 
 since_date = datetime(2015, 1, 1)
-query = "from:HSGStGallen since:2015-01-01"
+query = "from:HSGStGallen since:2014-12-31"
 
 search = TwitterSearchScraper(query).get_items()
 tweets =[]
