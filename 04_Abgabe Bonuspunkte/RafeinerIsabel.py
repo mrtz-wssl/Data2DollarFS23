@@ -7,13 +7,13 @@ since_date = '2015-01-01'
 # Bestimmung des Suchbegriffs und Startdatum (from um nur die eigenen Tweets zu ziehen)
 search_query = 'from:HSGStGallen since:' + since_date
 
-# Ausführen der Suchanfrage
+#Ausfuehren der Suchanfrage
 search_results = TwitterSearchScraper(search_query).get_items()
 
 # Initialisieren der Liste
 tweets_list = []
 
-# Loop durch die Ergebnisse und Anhängen dieser an die Liste
+# Loop durch die Ergebnisse und Anhaengen dieser an die Liste
 for tweet in search_results:
     tweets_list.append({
         'tweet_content': tweet.rawContent,
